@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · sasu-schedule</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; max-width: 42rem; margin: 0 auto; padding: 2.5rem 1.25rem; line-height: 1.6; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.1rem; margin-top: 1.8rem; }
+  a { color: #4f46e5; }
+  .updated { font-size: .85rem; opacity: .7; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+  <h1>Política de privacidad de sasu-schedule</h1>
+  <p class="updated">Última actualización: 3 de octubre de 2026</p>
+
+  <p>
+    sasu-schedule es una aplicación personal de control horario, de uso privado,
+    que se ejecuta en el servidor del propio titular. Esta política explica qué
+    datos trata y con qué finalidad.
+  </p>
+
+  <h2>1. Datos que trata la aplicación</h2>
+  <ul>
+    <li>
+      <strong>Registros de fichaje</strong> (horas de entrada y salida, pausas,
+      notas del día y reglas de horario). Se guardan en una base de datos
+      PostgreSQL alojada en el servidor del propio titular. No se envían a
+      terceros.
+    </li>
+    <li>
+      <strong>Credenciales de acceso</strong>: una passkey (huella o PIN) y, para
+      el primer acceso, la cuenta de Google del titular.
+    </li>
+  </ul>
+
+  <h2>2. Datos de las API de Google</h2>
+  <p>
+    La aplicación usa las API de Google únicamente de dos formas:
+  </p>
+  <ul>
+    <li>
+      <strong>Inicio de sesión</strong> con la cuenta de Google del titular, para
+      identificarlo. Solo se conserva su dirección de correo electrónico.
+    </li>
+    <li>
+      <strong>Copia de seguridad en Google Drive</strong>, con el permiso
+      <code>https://www.googleapis.com/auth/drive.file</code>. Este permiso da
+      acceso <em>únicamente</em> a los ficheros que la propia aplicación crea; no
+      permite ver ni modificar el resto del Drive del usuario. La copia se cifra
+      en el servidor con AES-256-GCM antes de subirse, de modo que Google
+      almacena un fichero cifrado que no puede leer.
+    </li>
+  </ul>
+  <p>
+    Los datos obtenidos de las API de Google no se comparten con terceros, no se
+    usan para publicidad, no se venden y no se emplean para entrenar modelos. El
+    titular puede revocar el acceso en cualquier momento desde
+    <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>.
+  </p>
+  <p>
+    <strong>sasu-schedule&#39;s use and transfer to any other app of information
+    received from Google APIs will adhere to the
+    <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google
+    API Services User Data Policy</a>, including the Limited Use requirements.</strong>
+  </p>
+
+  <h2>3. Conservación y eliminación</h2>
+  <p>
+    Los datos permanecen en el servidor del titular hasta que este los borra. Las
+    copias de seguridad en Google Drive se conservan según su propia retención
+    (14 copias por defecto) y pueden eliminarse en cualquier momento borrando la
+    carpeta de copias y revocando el acceso de la aplicación.
+  </p>
+
+  <h2>4. Terceros</h2>
+  <p>
+    No se comparte información con terceros. La aplicación solo se comunica con
+    los servicios de Google necesarios para el inicio de sesión y la copia de
+    seguridad.
+  </p>
+
+  <h2>5. Contacto</h2>
+  <p>
+    Para cualquier cuestión sobre esta política:
+    <a href="mailto:javsaura@gmail.com">javsaura@gmail.com</a>.
+  </p>
+
+  <footer>
+    <a href="./index.html">Inicio</a> · <a href="./terminos.html">Términos del servicio</a>
+  </footer>
+</body>
+</html>
